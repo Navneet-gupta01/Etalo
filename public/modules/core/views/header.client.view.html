@@ -1,0 +1,38 @@
+<div class="container" data-ng-controller="HeaderController">
+	<div class="navbar-header">
+		<button class="navbar-toggle" type="button" id="collpsable_nav" data-ng-click="toggleCollapsibleMenu()">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div class="header_left">
+			<span class="outlet_selected outlet"><span style="tex">{{outlet}}</span></span>
+			<span class="change_outlet outlet" data-ng-click="change_outlet()">Change Outlet</span>
+			<img src="/modules/core/img/etalo_extras/Eatlo_Logo_square.png" alt="Etalo" height="50px" width="150px"/>
+		</div>
+		<div class="cart" style="background-image: url('/modules/core/img/etalo_extras/shopping_cart.png')">
+	</div>
+	
+
+	</div>
+	<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+		<ul class="nav navbar-nav navbar-right">
+			<li ng-class="{active: $uiRoute}" onclick="window.open('https://www.facebook.com/eatloapp')">
+				<img src="/modules/core/img/etalo_extras/facebook.png" alt="Facebook" height="50px" width="50px">
+			</li>
+			<li class="divider-vertical"></li>
+			<li ng-class="{active: $uiRoute}" onclick="window.open('https://www.twitter.com/eatloapp')">
+				<img src="/modules/core/img/etalo_extras/twitter.png" alt="Twitter" height="50px" width="50px">
+			</li>
+			<li class="divider-vertical"></li>
+			<li ng-class="{active: $uiRoute}">
+				<img onclick="window.open('http://www.eatloapp.com/app')" src="/modules/core/img/etalo_extras/android.png" height="50px" width="50px" alt="Android">
+			</li>
+			<li class="divider-vertical"></li>
+			<li ng-class="{active: $uiRoute}">
+				<img onclick="window.open('http://about.eatloapp.com/ios')" src="/modules/core/img/etalo_extras/apple.png" alt="Apple" height="50px" width="50px">
+			</li>
+		</ul>
+	</nav>
+</div>

@@ -1,0 +1,20 @@
+<div class="container" data-ng-controller="FooterController">
+	<div style="width:75%; margin:0 auto;">
+    <nav class="collapse navbar-collapse" collapse="!isCollapsed2" role="navigation">   
+    	<ul class="nav navbar-nav">
+    		<li data-ng-repeat="section in sections">
+        		<a href="#!/outlets">{{section}}</a>
+        	</li>
+        </ul>
+	</nav>
+	</div>
+	<div class="navbar-header">
+		<div class="navbar-toggle selected" style="float:left;"><a href="#!/outlets">Choose Location</a></div>
+        <button class="navbar-toggle" type="button" id="collpsable_nav" data-ng-click="toggleCollapsibleMenu2()">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>                        
+		</button>
+	</div>
+</div>

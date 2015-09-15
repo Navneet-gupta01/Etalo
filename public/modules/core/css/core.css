@@ -1,0 +1,158 @@
+.content {
+	margin-top: 50px;
+}
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+body {
+	color :#8A8787;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size: 21px;
+}
+.icon-bar {
+	background-color: white;
+}
+header{
+	background-color: #e97770 !important;
+	box-shadow: 3px 3px 13px #CCC;
+}
+.section-container {
+	min-height: 600px;
+	margin-bottom: 100px;
+}
+.single_outlet {
+	background-color:#eeeeee;
+	border-radius:2px;
+	font-size: 16px;
+	text-overflow:ellipsis;
+	font-weight: bold;
+}
+.single_outlet img{
+	float:right;
+	padding-right:10px;
+	padding-top: 5px;
+}
+.single_outlet:hover {
+	background-color:#FFE8E8;
+	cursor: pointer;
+}
+.itemsNo span {
+	padding: 5px 15px;
+    background-color: white;
+    box-shadow: 4px 3px 4px #CCC;
+    border-radius: 7px;
+    cursor:pointer;
+}
+.outlet_section {
+	margin-bottom: 30px;
+}
+.etalo_menus .headiing {
+	font-size: 25px;
+}
+.menu_Product {
+	height:385px;
+	font-size:14.5px;
+	color:#000;
+}
+.product {
+	background-color: #f1f1f1;
+	box-shadow: 0 1px 6px #bbb;
+	margin-right:10px;
+	margin-bottom: 15px;
+}
+.product_information {
+	padding:5px;
+}
+.menu_Product .price {
+	float:right;
+}
+.cart {
+	font-size:21px;
+}
+.cart_section {
+	border-style: dashed;
+    border-width: 1px;
+}
+.menu_Product .product_details {
+	font-size: 13.4px;
+}
+.product_image {
+	height:125px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.button_sections {
+	margin-bottom:50px;
+	float:right;
+	padding:25px;
+}
+.button_sections button {
+	background-color: #e97770;
+	font-size: 16px;
+	color:#fff;
+	padding:10px;
+}
+.button_sections span {
+	padding :15px;
+}
+.outlet {
+    display: none;
+    font-size: 14px;
+	padding: 10px;
+	margin-top: 5px;
+    float: left;
+}
+.outlet_selected {
+    background-color: #dbdbdb;
+    text-overflow: ellipsis;
+}
+.change_outlet {
+    color: #dbdbdb;
+}
+footer{
+	min-height: 50px;
+	background-color:#777777;
+	position:fixed;
+	bottom:0;
+	z-index: 1000;
+	width:100%;
+}
+footer ul li, .etalo_menus ul li {
+	display : inline;
+	color:#ffffff;
+	float:left;
+	font-size: 16px;
+}
+footer a {
+	padding: 16px 20px;
+	color : #ffffff !important;
+}
+.selected {
+	text-decoration:none;
+	background-color: #e97770 !important;
+}
+footer a:hover {
+	text-decoration:none;
+	background-color: #000000 !important;
+}
+
+.text-center{
+	padding:8px;
+}
+.select_header {
+	padding-top: 17px;
+	padding-bottom: 21px;
+}
+.center {
+	margin:0 auto;
+}

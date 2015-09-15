@@ -1,0 +1,20 @@
+<section class="container" data-ng-controller="OutletController" data-ng-init="getOutlets()">
+	<div class="top">
+		<div class="row text-center select_header">
+			<span>Select Delivery Location</span>
+		</div>
+		<div class="row outlet_section">
+			<div class="col-md-4 col-sm-3"></div>
+			<div class="col-md-4 col-sm-6">
+				<div class="single_outlet text-center" data-ng-repeat="outlet in outlets" data-ng-click="getMenu(outlet)">
+					<span>{{outlet}}</span>
+					<img src="/modules/etalo/img/next-off.png">
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-3"></div>
+		</div>
+		<br>
+		<br>
+		<br>
+	</div>	
+</section>
