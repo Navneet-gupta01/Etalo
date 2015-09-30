@@ -3,13 +3,13 @@
  */
 'use strict';
 
-angular.module('etalo').controller('OutletController', ['$scope','$routeParams','$window',
-	function($scope,$routeParams,$window) {
+angular.module('etalo').controller('OutletController', ['$scope','$routeParams','$window','OutletsService',
+	function($scope,$routeParams,$window,OutletsService) {
 		// This provides Authentication context.
 		$scope.getOutlets = function() {
-			$scope.outlets = ['Bellandur','HSR Layout','Indiranagar','BTM Layout','AKR Tech Park','Sarjapur Road','Domlur',
-			'Koramangala','Outer Ring Road - Kadubeesanahalli','MG Road','Bannerghatta Road','Old Airport Road - Kodihalli',
-			'ITPL - Brookefield','Bagmane Tech Park - C.V. Raman Nagar','Electronic City'];
+			var outlets = OutletsService.query({},function(){
+				$scope.outlets = outlets.outlet;
+			});
 		};
 		$scope.getMenu = function(outlet) {
 			localStorage.setItem('outlet', outlet);

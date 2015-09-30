@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', '$window',
-	function($scope,$window) {
+angular.module('core').controller('HeaderController', ['$scope', '$window', '$location',
+	function($scope,$window,$location) {
 		$scope.isCollapsed = false;
 
 		$scope.toggleCollapsibleMenu = function() {
@@ -11,6 +11,8 @@ angular.module('core').controller('HeaderController', ['$scope', '$window',
 		// Collapsing the menu after navigation
 		$scope.$on('$routeChangeSuccess', function() {
 			$scope.isCollapsed = false;
+			if($location.path() === '/outlets')
+				$('.outlet').css('display', 'none');
 		});
 		
 		if(localStorage.getItem('outlet') !== null) {

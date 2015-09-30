@@ -9,4 +9,5 @@ module.exports = function(app) {
    
     app.route('/outlets').get(outlets.list);
     app.route('/menus').get(menus.list);
+    app.route('/getCartValue').post(menus.getCartValue);
 };

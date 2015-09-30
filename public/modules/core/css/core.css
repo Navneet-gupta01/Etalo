@@ -18,6 +18,10 @@ body {
 	font-family: 'Raleway', Helvetica, Arial, sans-serif;
 	font-size: 21px;
 }
+nav ul li:hover {
+	cursor:pointer;
+	background-color: #D26B65;
+}
 .icon-bar {
 	background-color: white;
 }
@@ -76,12 +80,17 @@ header{
 	float:right;
 }
 .cart {
-	font-size:21px;
+	padding: 10px;
 }
 .cart_section {
 	border-style: dashed;
     border-width: 1px;
+    box-shadow: 3px 3px 6px #CCC;
 }
+.cart_item{
+	float:left;
+}
+.cart_item
 .menu_Product .product_details {
 	font-size: 13.4px;
 }
@@ -133,6 +142,9 @@ footer ul li, .etalo_menus ul li {
 	float:left;
 	font-size: 16px;
 }
+footer li.active {
+	background-color: #e97770 !important;
+}
 footer a {
 	padding: 16px 20px;
 	color : #ffffff !important;
@@ -145,7 +157,6 @@ footer a:hover {
 	text-decoration:none;
 	background-color: #000000 !important;
 }
-
 .text-center{
 	padding:8px;
 }

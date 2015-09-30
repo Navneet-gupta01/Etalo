@@ -7,7 +7,7 @@ angular.module('etalo').factory('OutletsService', ['$resource', function($resour
     var resource = $resource('/outlets', {}, {
         query: {
             method: 'GET',
-            isArray: true
+            isArray: false
         }
         });
     return resource;
@@ -16,8 +16,9 @@ angular.module('etalo').factory('MenusService', ['$resource', function($resource
     var resource = $resource('/menus?outlet=:outlet', {}, {
         query: {
             method: 'GET',
-            isArray: true
+            isArray: false
         }
         });
     return resource;
 }]);
+
