@@ -68,10 +68,13 @@ header{
 	color:#000;
 }
 .product {
-	background-color: #f1f1f1;
+	background-color: #E4E4E4;
 	box-shadow: 0 1px 6px #bbb;
 	margin-right:10px;
 	margin-bottom: 15px;
+}
+.product:hover {
+	background-color: #F7F7F7;
 }
 .product_information {
 	padding:5px;
