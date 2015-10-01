@@ -53,12 +53,20 @@
 					</span>
 					<div class="cart_section" style="border-style: double;"></div>
 					<div class="cart_details" data-ng-repeat="(key, value) in cart">
-						<div class="cart_item"><span>{{key}}</span></div>
-						<span style="margin-left:25px;">{{value.noOfItems}}</span>
-						<span style="margin-left:25px;"> &#8377 {{value.noOfItems * value.priceEach}}</span>
+						<div class="row">
+							<div class="cart_item col-sm-6 col-xs-6"><span>{{key}}</span></div>
+							<span class="col-sm-2 col-xs-2">{{value.noOfItems}}</span>
+							<span class="col-sm-4 col-xs-4"> &#8377 {{value.noOfItems * value.priceEach}}</span>
+						</div>
 					</div>
 					<div class="cart_section" style="border-style: double;"></div>
-					<span class="total_cost">Total : &#8377 <strong>{{totalCost}}</strong></span>
+					<div class="row">
+						<div class="col-sm-4 col-xs-4"></div>
+						<div class="col-sm-4 col-xs-4"><span style="float: right;">Total :</span></div>
+						<div class="col-sm-4 col-xs-4">
+							<span class="total_cost">&#8377 <strong>{{totalCost}}</strong></span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -25,42 +25,36 @@ angular.module('etalo').controller('MenusController', ['$scope','$window','Menus
 		$scope.cartEmpty = true;
 		$scope.incrementItemToCart = function(menu) {
 			menu.noOfItemsSelected ++;
+			$scope.totalCost = $scope.totalCost + menu.price;
 			if($scope.cart.hasOwnProperty(menu.name)) {
 				$scope.cart[menu.name].noOfItems  = menu.noOfItemsSelected;
-				$scope.totalCost = $scope.totalCost + menu.price;
 			} else {
 				$scope.cart[menu.name] = {noOfItems:menu.noOfItemsSelected,priceEach:menu.price};
-				$scope.totalCost = $scope.totalCost + menu.price;
 			}
-			$scope.cartEmpty = $scope.cart.length>0;
+			$scope.cartEmpty = $.isEmptyObject($scope.cart);
 		};
 		$scope.decrementItemFromCart = function(menu) {
 			menu.noOfItemsSelected --;
+			$scope.totalCost = $scope.totalCost - menu.price;
 			if($scope.cart.hasOwnProperty(menu.name)) {
 				if(menu.noOfItemsSelected ===0) {
 					delete $scope.cart[menu.name];
 				} else {
 					$scope.cart[menu.name].noOfItems  = menu.noOfItemsSelected;
-					$scope.totalCost = $scope.totalCost - menu.price;
 				}
 			} else {
 				$scope.cart[menu.name] = {noOfItems:menu.noOfItemsSelected,priceEach:menu.price};
-				$scope.totalCost = $scope.totalCost - menu.price;
 			}
-			$scope.cartEmpty = $scope.cart.length>0;
+			$scope.cartEmpty = $.isEmptyObject($scope.cart);
 		};
 			
 		$scope.resetCart = function() {
-			for(var property in $scope.cart){
-				if($scope.cart.hasOwnProperty(property)) {
-					$scope.menus.forEach(function(menu) {
-						menu.noOfItemsSelected=0;
-					});
-					delete $scope.cart[property];
-				}
-			}
-			$scope.cartEmpty = $scope.cart.length > 0;
+			$scope.menus.forEach(function(menu) {
+				menu.noOfItemsSelected=0;
+			});
+			$scope.cart = {};
 			$scope.totalCost = 0.00;
+			$scope.cartEmpty = $.isEmptyObject($scope.cart);
 		};
 		$scope.getCart = function(){
 			var cart = $scope.cart;

@@ -102,10 +102,9 @@ exports.list =  function(req, res) {
   res.json({menu:menus});
 };
 exports.getCartValue = function(req,res) {
-    var itemsInCart = req.body.cart;
-    console.log(JSON.stringify(itemsInCart));
-    var totalCost = 0;
-    var cart = {};
+    var itemsInCart = req.body.cart,
+        totalCost = 0,
+        cart = {};
     for( var key in itemsInCart){
         if(itemObj.hasOwnProperty(key)){
             cart[key] = {noOfItems : itemsInCart[key].noOfItems,priceEach:itemObj[key]};
